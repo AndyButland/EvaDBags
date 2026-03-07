@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <rect width="400" height="500" fill="#F0EBE3"/>
+  <rect x="140" y="120" width="120" height="160" rx="4" stroke="#C9A96E" stroke-width="2" fill="none"/>
+  <path d="M170 120 C170 90 230 90 230 120" stroke="#C9A96E" stroke-width="2" fill="none"/>
+  <line x1="200" y1="160" x2="200" y2="240" stroke="#C9A96E" stroke-width="1.5" opacity="0.5"/>
+  <text x="200" y="340" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="20" fill="#C9A96E">Coming Soon</text>
+  <text x="200" y="370" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="11" fill="#1A1A1A" opacity="0.5">Prossimamente</text>
+</svg>
