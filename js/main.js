@@ -44,6 +44,8 @@ const lightbox = document.querySelector('.lightbox');
 const lbMain = lightbox.querySelector('.lightbox__main img');
 const lbName = lightbox.querySelector('.lightbox__name');
 const lbDesc = lightbox.querySelector('.lightbox__desc');
+const lbDetail = lightbox.querySelector('.lightbox__detail');
+const lbMeta = lightbox.querySelector('.lightbox__meta');
 const lbThumbs = lightbox.querySelector('.lightbox__thumbs');
 const lbInfo = lightbox.querySelector('.lightbox__info');
 let currentBag = null;
@@ -57,6 +59,11 @@ function getBagData(card) {
   return {
     name: card.querySelector('.bag-card__name').textContent,
     desc: card.querySelector('.bag-card__desc').textContent,
+    detail: card.getAttribute('data-detail') || '',
+    material: card.getAttribute('data-material') || '',
+    materialLabel: card.getAttribute('data-material-label') || 'Materials',
+    size: card.getAttribute('data-size') || '',
+    sizeLabel: card.getAttribute('data-size-label') || 'Size',
     images: JSON.parse(imagesAttr),
     thumbs: JSON.parse(card.getAttribute('data-thumbs'))
   };
@@ -70,6 +77,13 @@ function showSlide(index) {
   lbMain.alt = bag.name + ' — image ' + (index + 1) + ' of ' + bag.images.length;
   lbName.textContent = bag.name;
   lbDesc.textContent = bag.desc;
+  lbDetail.textContent = bag.detail;
+  lbDetail.style.display = bag.detail ? 'block' : 'none';
+  var metaParts = [];
+  if (bag.material) metaParts.push(bag.materialLabel + ': ' + bag.material);
+  if (bag.size) metaParts.push(bag.sizeLabel + ': ' + bag.size);
+  lbMeta.textContent = metaParts.join('  |  ');
+  lbMeta.style.display = metaParts.length ? 'block' : 'none';
   lbThumbs.querySelectorAll('.lightbox__thumb').forEach((t, i) => {
     t.classList.toggle('active', i === index);
   });
