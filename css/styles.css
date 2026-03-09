@@ -161,13 +161,13 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(2rem, 4vw, 4rem);
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem 5%;
+  max-width: 1400px;
+  padding: 0 3%;
 }
 .hero__content {
-  flex: 1;
+  flex: 0 0 auto;
   text-align: center;
 }
 .hero__logo {
@@ -198,13 +198,19 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   margin-top: 0.6rem;
 }
 .hero__image {
-  flex: 1 1 50%;
-  max-width: 550px;
+  flex: 1 1 0;
+  max-height: 90vh;
   position: relative;
 }
 .hero__image img {
-  -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 60%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 40%, black 60%, transparent);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, black 40%, black 60%, transparent),
+    linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-composite: destination-in;
+  mask-image:
+    linear-gradient(to right, transparent, black 40%, black 60%, transparent),
+    linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  mask-composite: intersect;
 }
 .hero__image img {
   width: 100%;
