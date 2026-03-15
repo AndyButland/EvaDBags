@@ -204,11 +204,11 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 }
 .hero__image img {
   -webkit-mask-image:
-    linear-gradient(to right, transparent, black 40%, black 60%, transparent),
+    linear-gradient(to right, transparent, black 20%, black 60%, transparent),
     linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
   -webkit-mask-composite: destination-in;
   mask-image:
-    linear-gradient(to right, transparent, black 40%, black 60%, transparent),
+    linear-gradient(to right, transparent, black 20%, black 60%, transparent),
     linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
   mask-composite: intersect;
 }
@@ -346,6 +346,19 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   color: #888;
   line-height: 1.6;
 }
+.bag-card__detail {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.6;
+  margin-top: 0.4rem;
+}
+.bag-card__meta {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
 .bag-card--placeholder {
   cursor: default;
 }
@@ -433,22 +446,6 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .lightbox__desc {
   font-size: 0.85rem;
   opacity: 0.7;
-}
-.lightbox__detail {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  font-style: italic;
-  margin-top: 0.4rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.lightbox__meta {
-  text-align: center;
-  color: rgba(255,255,255,0.5);
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  margin-top: 0.8rem;
 }
 .lightbox__thumbs {
   display: flex;
@@ -552,9 +549,9 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   .hero__inner {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 2rem;
+    gap: 0.5rem;
   }
-  .hero__image { width: clamp(180px, 50vw, 280px); }
+  .hero__image { width: clamp(240px, 70vw, 360px); }
   .lightbox__arrow--prev { left: 0; }
   .lightbox__arrow--next { right: 0; }
   .lightbox__arrow { font-size: 1.8rem; padding: 0.5rem; }
