@@ -38,7 +38,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
 .logo {
-  font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;
+  font-family: 'Lumanosimo', 'Lucida Handwriting', cursive;
   font-size: 1.6rem;
   letter-spacing: 0.05em;
   color: #1A1A1A;
@@ -171,13 +171,13 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   text-align: center;
 }
 .hero__logo {
-  font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;
+  font-family: 'Lumanosimo', 'Lucida Handwriting', cursive;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   color: #FAFAF7;
   margin-bottom: 0.2rem;
 }
 .hero__tagline--script {
-  font-family: 'Lucida Handwriting', 'Brush Script MT', cursive;
+  font-family: 'Lumanosimo', 'Lucida Handwriting', cursive;
   font-size: clamp(1.4rem, 3vw, 2rem);
   color: #C9A96E;
   margin-bottom: 3.5rem;
@@ -549,9 +549,15 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   .hero__inner {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0;
   }
-  .hero__image { width: clamp(240px, 70vw, 360px); }
+  .hero__image {
+    margin-bottom: -2rem;
+  }
+  .hero__subtitle {
+    padding-bottom: 1.5rem;
+  }
+  .hero__image { width: clamp(280px, 80vw, 420px); }
   .lightbox__arrow--prev { left: 0; }
   .lightbox__arrow--next { right: 0; }
   .lightbox__arrow { font-size: 1.8rem; padding: 0.5rem; }
