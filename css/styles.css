@@ -135,7 +135,8 @@ h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
   font-size: 1.8rem;
   letter-spacing: 0.08em;
 }
-.mobile-menu .lang-toggle { font-size: 1rem; margin-top: 1rem; }
+.mobile-menu .lang-toggle { font-size: 1rem; margin-top: 1rem; color: #1A1A1A; }
+.mobile-menu .lang-toggle a { font-family: inherit; font-size: inherit; font-weight: inherit; }
 
 /* ===== HERO ===== */
 .hero {
